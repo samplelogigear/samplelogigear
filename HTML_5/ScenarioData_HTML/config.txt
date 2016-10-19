@@ -15,3 +15,4 @@ Timing_Settings
 iframe_cross_domain
 iframe_same_domain
 drop_down_menu
+list_checkbox
