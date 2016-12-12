@@ -17,3 +17,4 @@ iframe_same_domain
 drop_down_menu
 list_checkbox
 List1000items
+MultiControls_sample_with_HTML5_Cloud
