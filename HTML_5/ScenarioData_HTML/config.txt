@@ -20,4 +20,4 @@ List1000items
 MultiControls_sample_with_HTML5_Cloud
 textbox_fire_event
 WebBasedAutomationTesting
-alert
+alertScenario
