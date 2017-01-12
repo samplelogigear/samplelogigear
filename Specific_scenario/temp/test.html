@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script src="http://enyojs.com/enyo-2.0.1/enyo.js"></script>
+		<script src="http://enyojs.com/enyo-2.0.1/enyo/source/ajax/Ajax.js"></script>
+		<script src="http://enyojs.com/enyo-2.0.1/enyo/source/ajax/AjaxProperties.js"></script>
+		<script src="http://enyojs.com/enyo-2.0.1/enyo/source/ajax/Async.js"></script>
+		<script src="http://enyojs.com/enyo-2.0.1/enyo/source/ajax/xhr.js"></script>
+		<script src="http://enyojs.com/enyo-2.0.1/enyo/source/ajax/json.js"></script>
+		<script src="Wrapper.js"></script>
+		<script src="hello.js"></script>
+		<script type="text/javascript">
+			function open_win()
+			{
+				var wrapper = window.open("https://www.google.com.vn/?gfe_rd=cr&ei=x_h2WM7QCsXC8gfpzaDoDw&gws_rd=ssl" );
+				wrapper.url = "http://localhost/myweb/main.html";
+				wrapper.filename = "TestEnyo";
+				var req = new enyo.Ajax({url: "http://localhost/myweb/ibtn.html"});
+				req.go();
+				req.response(this, function(inSender, inResponse) {
+					wrapper.document.write(inResponse);
+					wrapper.moveTo(0,0);
+					wrapper.resizeTo(screen.width,screen.height);
+				});
+			}
+		</script>
+	</head>
+
+	<body>
+		<form>
+			<input id="btnopen" type="button" value="open new window" onclick="open_win()">
+		</form>
+	
+	</body>
+</html>
